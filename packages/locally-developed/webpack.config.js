@@ -1,21 +1,22 @@
-const { mergeWithRules } = require("webpack-merge");
-const singleSpaDefaults = require("webpack-config-single-spa-react");
+const { mergeWithRules } = require('webpack-merge')
+const singleSpaDefaults = require('webpack-config-single-spa-react')
+const StandaloneSingleSpaPlugin = require('standalone-single-spa-webpack-plugin')
 
 const mergeRules = {
   module: {
     rules: {
-      test: "match",
-      include: "replace",
-      exclude: "replace",
-      use: "replace",
+      test: 'match',
+      include: 'replace',
+      exclude: 'replace',
+      use: 'replace',
     },
   },
 };
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
-    orgName: "andric",
-    projectName: "locally-developed",
+    orgName: 'andric',
+    projectName: 'locally-developed',
     webpackConfigEnv,
     argv,
   });
@@ -27,13 +28,13 @@ module.exports = (webpackConfigEnv, argv) => {
         {
           test: /\.css$/i,
           use: [
-            "style-loader",
+            'style-loader',
             {
-              loader: "css-loader",
+              loader: 'css-loader',
               options: {
                 importLoaders: 1,
                 modules: {
-                  localIdentName: "[path][name]__[local]--[hash:base64:5]",
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]',
                 },
               },
             },
