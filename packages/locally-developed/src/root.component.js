@@ -1,8 +1,11 @@
-import styles from "./something.css";
+// import cssModules from './something.css'
+// console.log('cssModules', cssModules)
 
-// const styles = {
-//   backgroundColor: 'lightgrey'
-// }
+import test from "./test";
+
+const styles = {
+  backgroundColor: "lightgrey",
+};
 
 export default () => (
   <section
@@ -11,6 +14,6 @@ export default () => (
       console.log("but seriously tho, andric rules");
     }}
   >
-    ANDRIC RULES
+    ANDRIC RULES {test()}
   </section>
 );
