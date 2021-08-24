@@ -1,8 +1,16 @@
-// import styles from './something.css'
+import styles from "./something.css";
 
-const styles = {
-  backgroundColor: 'lightgrey'
-}
+// const styles = {
+//   backgroundColor: 'lightgrey'
+// }
 
-export default () => 
-  <section style={styles} onClick={() => {console.log('but seriously tho, andric rules')}}>ANDRIC RULES</section>
+export default () => (
+  <section
+    className={styles.face}
+    onClick={() => {
+      console.log("but seriously tho, andric rules");
+    }}
+  >
+    ANDRIC RULES
+  </section>
+);
