@@ -1,8 +1,10 @@
 const { mergeWithRules } = require('webpack-merge')
 const singleSpaDefaults = require('webpack-config-single-spa-react')
 const StandaloneSingleSpaPlugin = require('standalone-single-spa-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const mergeRules = {
+  plugins: 'replace',
   module: {
     rules: {
       test: 'match',
@@ -19,10 +21,22 @@ module.exports = (webpackConfigEnv, argv) => {
     projectName: 'locally-developed',
     webpackConfigEnv,
     argv,
-  });
+  })
 
   return mergeWithRules(mergeRules)(defaultConfig, {
-    // customize the webpack config here
+    plugins: [
+      new StandaloneSingleSpaPlugin({
+        appOrParcelName: 'andric-locally-developed',
+      }),
+      new HtmlWebpackPlugin({
+        inject: false,
+        template: 'standalone/index.ejs',
+        templateParameters: {
+          isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
+          orgName: 'standalone',
+        },
+      }),
+    ],
     module: {
       rules: [
         {
