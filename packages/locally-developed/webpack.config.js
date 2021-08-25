@@ -2,9 +2,15 @@ const { mergeWithRules } = require('webpack-merge')
 const singleSpaDefaults = require('webpack-config-single-spa-react')
 const StandaloneSingleSpaPlugin = require('standalone-single-spa-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 const mergeRules = {
   plugins: 'replace',
+  devServer: {
+    static: {
+      directory: 'replace',
+    }
+  },
   module: {
     rules: {
       test: 'match',
@@ -23,6 +29,9 @@ module.exports = (webpackConfigEnv, argv) => {
     argv,
   })
 
+  console.log(defaultConfig)
+  process.exit()
+
   return mergeWithRules(mergeRules)(defaultConfig, {
     plugins: [
       new HtmlWebpackPlugin({
@@ -34,6 +43,11 @@ module.exports = (webpackConfigEnv, argv) => {
         },
       }),
     ],
+    devServer: {
+      static: {
+        directory: path.join(__dirname, 'standalone'),
+      },
+    },
     module: {
       rules: [
         {

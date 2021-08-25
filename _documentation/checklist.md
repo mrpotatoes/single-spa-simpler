@@ -55,6 +55,8 @@ Must include all the non debatable requirements above
     - [ ] A way to do versioning
     - [ ] A way to do A/B tests
     - [ ] Container to choose app version
+- [ ] A tool to run it locally that will inject itself into webpack
+    - [ ] Should basically be the root config but for a single page (hardcoded import maps)
 
 ## Useful tools to have 
 - [ ] MFE Creator
