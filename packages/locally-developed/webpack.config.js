@@ -29,9 +29,6 @@ module.exports = (webpackConfigEnv, argv) => {
     argv,
   })
 
-  console.log(defaultConfig)
-  process.exit()
-
   return mergeWithRules(mergeRules)(defaultConfig, {
     plugins: [
       new HtmlWebpackPlugin({
