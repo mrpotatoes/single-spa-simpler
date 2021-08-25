@@ -1,0 +1,10 @@
+0 silly argv { _: [ 'run' ], lernaVersion: '4.0.0', '$0': 'lerna', script: 'start' }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/mma1083/Projects/single-spa-simpler
+3 error Error: Invalid package name "_service": name cannot start with an underscore
+3 error     at invalidPackageName (/Users/mma1083/.nvm/versions/node/v14.16.1/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:84:15)
+3 error     at Result.setName (/Users/mma1083/.nvm/versions/node/v14.16.1/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:119:11)
+3 error     at new Result (/Users/mma1083/.nvm/versions/node/v14.16.1/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:110:10)
+3 error     at Function.resolve (/Users/mma1083/.nvm/versions/node/v14.16.1/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:54:15)
+3 error     at new Package (/Users/mma1083/.nvm/versions/node/v14.16.1/lib/node_modules/lerna/node_modules/@lerna/package/index.js:95:26)
+3 error     at /Users/mma1083/.nvm/versions/node/v14.16.1/lib/node_modules/lerna/node_modules/@lerna/project/index.js:207:26

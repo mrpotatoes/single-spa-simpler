@@ -25,9 +25,6 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return mergeWithRules(mergeRules)(defaultConfig, {
     plugins: [
-      new StandaloneSingleSpaPlugin({
-        appOrParcelName: 'andric-locally-developed',
-      }),
       new HtmlWebpackPlugin({
         inject: false,
         template: 'standalone/index.ejs',
