@@ -35,21 +35,31 @@
 ---
 ## TODO
 Must include all the non debatable requirements above
+### Musts
+- [ ] Tech talk
 - [ ] Create an App with complete development flow
 - [ ] Include CDN stuff (AWS a +)
 - [ ] Include simple tools to work locally
-- [ ] How CI/CD is able
 - [ ] Must be a "complex" app
-    - Nav
-    - Footer
-    - Multiple apps
-      - Can apps have sub apps?
-    - Complex routes
-    - 
+    - [ ] Nav
+    - [ ] Footer
+    - [ ] Multiple apps
+      - [ ] Can apps have sub apps?
+    - [ ] Complex routes
+        - [ ] App multiple routes
+        - [ ] Main routes
+- [ ] Same CSS not affecting other apps
+### Optional
+- [ ] How CI/CD to push to AWS/CDN
+- [ ] Show, even if hardcoded,
+    - [ ] A way to do versioning
+    - [ ] A way to do A/B tests
+    - [ ] Container to choose app version
 
 ## Useful tools to have 
 - [ ] MFE Creator
 - [ ] MFE "The Deciderer"
+
 ## Other things
 - [ ] Separate all local development stuf from prod stuff
 - [ ] Same for comfig
