@@ -35,9 +35,15 @@
 ---
 ## TODO
 Must include all the non debatable requirements above
+
 ### Musts
 - [ ] Tech talk
 - [ ] Create an App with complete development flow
+  - [ ] Make an MFE for all the important bits here
+      - [ ] [Main page](https://getbootstrap.com/docs/4.0/examples/cover/)
+      - [ ] [Products list](https://getbootstrap.com/docs/4.0/examples/product/#)
+      - [ ] [Product Page](https://bbbootstrap.com/snippets/bootstrap-ecommerce-product-list-carousel-and-custom-radio-buttons-62651409)
+      - [ ] [Pricing page](https://getbootstrap.com/docs/4.0/examples/pricing/)
 - [ ] Include CDN stuff (AWS a +)
 - [ ] Include simple tools to work locally
 - [ ] Must be a "complex" app
